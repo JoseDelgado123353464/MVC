@@ -12,6 +12,19 @@ class UsuarioController{
     }
 
     public function crear(){
+        require_once 'modelo/modelsUsuario.php';
+        $practicanteDeBodega = new Usuario();
+        
+        $practicanteDeBodega->setIdusuario('null');
+        $practicanteDeBodega->setNombre('Juan Sebastian');
+        $practicanteDeBodega->setapellidos('Nieto');
+        $practicanteDeBodega->Setemail('jajaja@gmail.com');
+        $practicanteDeBodega->Setpassword('jajaja@gmail.com');
+
+     
+        $guardar=$practicanteDeBodega->crear();
+
+
         require_once 'vista/usuarios/crear.php';
     }
 }
